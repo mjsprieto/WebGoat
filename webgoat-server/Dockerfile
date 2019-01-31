@@ -10,7 +10,7 @@ USER webgoat
 RUN cd /home/webgoat/; mkdir -p .webgoat-${webgoat_version}
 COPY target/webgoat-server-${webgoat_version}.jar /home/webgoat/webgoat.jar
 
-EXPOSE 80
+EXPOSE 8181
 
 ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "/home/webgoat/webgoat.jar"]
-CMD ["--server.port=80", "--server.address=0.0.0.0"]
+CMD ["--server.port=8181", "--server.address=0.0.0.0"]
