@@ -331,22 +331,10 @@ public class CreateDB {
             statement.executeUpdate(createTableStatement);
         } catch (SQLException e) {
             System.out.println("Error creating user_login table " + e.getLocalizedMessage());
-        }
-        try {
-        	String insertData1 = "INSERT INTO user_login VALUES ('101', 'jsnow')";
-        	statement.executeUpdate(insertData1);
-        } catch (SQLException e) {
-            System.out.println("Error creating user_login table " + e.getLocalizedMessage());
-        }
-        try {
-        	String insertData1 = "INSERT INTO WebGoatUser VALUES ('mjsp', 'mjsp', 'WEBGOAT_ADMIN')";
-        	statement.executeUpdate(insertData1);
-        } catch (SQLException e) {
-            System.out.println("Error creating WebGoatUser table " + e.getLocalizedMessage());
-        }
+        }   
         
         try {
-        	String insertData1 = "INSERT INTO web_goat_user VALUES ('mjsp', 'mjsp', 'WEBGOAT_ADMIN')";
+        	String insertData1 = "INSERT INTO WEB_GOAT_USER VALUES ('mjsp', 'mjsp', 'WEBGOAT_ADMIN')";
         	statement.executeUpdate(insertData1);
         } catch (SQLException e) {
             System.out.println("Error creating Web_Goat_User table " + e.getLocalizedMessage());
